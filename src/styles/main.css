@@ -66,13 +66,14 @@ li:hover {
     background-color: #00b4d8;
     padding: 30px;
     flex-basis: 400px;
-    height: 600px;
+    height: 800px;
 }
 
 .track-player-container {
+    padding: 100px 50px;
     background-color: #023e8a;
     flex-basis: 500px;
-    height: 600px;
+    height: 800px;
 }
 
 .recent-searches, .filter-container {
