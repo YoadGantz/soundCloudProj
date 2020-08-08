@@ -1,0 +1,189 @@
+@font-face {
+    font-family: Lemonada;
+    src: url('../assets/fonts/Lemonada-Regular.ttf')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Lemonada;
+}
+
+#root {
+    background-color: #caf0f8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+li {
+    cursor: pointer;
+    margin-block-end: 15px;
+    font-size: 1.1rem;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    font-size: .8rem;
+    padding-block-end: 15px;
+    text-align: center;
+}
+
+li:hover {
+    color: #ffffff;
+}
+
+.app-container {
+    min-height: 100vh;
+}
+.header {
+    margin: 50px 0;
+    text-align: center;
+}
+
+
+.track-search-container, .track-player-container, .search-history-container {
+    box-shadow: 2px 2px 30px 20px rgba(36, 2, 146, 0.5);
+}
+
+.track-search-container, .search-history-container {
+    background-color: #00b4d8;
+    padding: 30px;
+    flex-basis: 400px;
+    height: 600px;
+}
+
+.track-player-container {
+    background-color: #023e8a;
+    flex-basis: 500px;
+    height: 600px;
+}
+
+.recent-searches, .filter-container {
+    margin-block-end: 20px;
+}
+
+.track-search-container li {
+    padding: 5px 0;
+    border-bottom: black 1px solid;
+}
+
+.track-search-container li:hover {
+    border-bottom: white 1px solid;
+}
+
+.next-select, .list-select, .tile-select {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform .3s;
+}
+
+.list-select {
+    margin-inline-end: 20px;
+}
+
+.next-select:hover, .list-select:hover, .tile-select:hover {
+    transform: scale(1.2);
+}
+
+.tile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.fade-in {
+    animation: fadeIn ease-in .5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut ease-in .5s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* HELPERS */
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.space-around {
+    justify-content: space-around;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.justify-center {
+    justify-content: center;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.fully-center {
+    align-items: center;
+    justify-content: center;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 420px) {
+    main {
+        flex-direction: column;
+    }
+    .header {
+        margin: 20px 0;
+    }
+    .track-search-container, .track-player-container, .search-history-container {
+        flex-basis: 80vh;
+        margin-block-end: 20vh;
+    }
+    .track-player-container {
+        padding: 25px 0;
+    }
+}
